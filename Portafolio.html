@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>German Industries Portafolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equip="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="index" />
+    <link
+      rel="icon"
+      href="Assets\IMG\GRA Industries LOGO ALPHA.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="mediastyle.css" />
+    <link rel="stylesheet" href="jquery.fancybox.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Script.Js"></script>
+    <script src="jquery.fancybox.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b3a5a6ddb5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var slides = $(".SliderPort li");
+        var totalSlides = slides.length;
+        var currentIndex = 0;
+        showSlide(currentIndex);
+
+        // Función para mostrar un slide específico
+        function showSlide(index) {
+          slides.removeClass("active");
+          slides.eq(index).addClass("active");
+          $("#MainPort")
+            .removeClass()
+            .addClass("MainPort slide" + (index + 1));
+        }
+
+        // Función para mostrar el siguiente slide
+        function nextSlide() {
+          currentIndex++;
+          if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+          }
+          showSlide(currentIndex);
+        }
+
+        // Función para mostrar el slide anterior
+        function prevSlide() {
+          currentIndex--;
+          if (currentIndex < 0) {
+            currentIndex = totalSlides - 1;
+          }
+          showSlide(currentIndex);
+        }
+
+        // Evento de clic para la flecha de siguiente
+        $(".fa-circle-arrow-right").click(nextSlide);
+
+        // Evento de clic para la flecha de anterior
+        $(".fa-circle-arrow-left").click(prevSlide);
+
+        // Cambio automático de slide cada 3 segundos
+        setInterval(nextSlide, 3000);
+      });
+    </script>
+  </head>
+
+  <body class="PortBody">
+    <div class="MobileNav" id="MobileNav">
+      <ul>
+        <li>
+          <a href="Index.html" class="LOGO" title="Regresa a Inicio"
+            ><img
+              src="Assets\IMG\GRA Industries LOGO ALPHA.png"
+              alt="LogoGRAIndustries"
+          /></a>
+        </li>
+        <li><a href="Index.html" title="Regresa a Inicio">Inicio</a></li>
+        <li>
+          <a href="SobreMi.html">Sobre Mi</a>
+          <ul class="Submenu">
+            <li><a href="SobreMi.html#SobreMi"> Resumen</a></li>
+            <li><a href="SobreMi.html#Experiencias"> Experiencia</a></li>
+            <li><a href="SobreMi.html#Formacion"> Formacion</a></li>
+            <li><a href="SobreMi.html#Habilidades"> Habilidades</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="Portafolio.html">Portafolio</a>
+          <ul class="Submenu">
+            <li><a href="Illus.html"> Illustraciones</a></li>
+            <li></li>
+            <li>
+              <a href="CompMG.html">Composicion /Motion Graphics</a>
+            </li>
+            <li><a href="Ani3d.html">Animación 3D</a></li>
+            <li><a href="Ani2d.html">Animación 2D</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="OtrosProyectos.html">Otros Proyectos</a>
+          <ul class="Submenu">
+            <li><a href="Skillquest.html">SkillQuest</a></li>
+            <li><a href="Makerzone.html">Makerzone</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#Contacto" id="BContacto">Contacto</a></li>
+        <li class="MenuBar">
+          <a href="#" id="CloseMenu">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <header id="main-header">
+      <nav class="Default">
+        <ul>
+          <li>
+            <a href="Index.html" class="LOGO" title="Regresa a Inicio"
+              ><img
+                src="Assets\IMG\GRA Industries LOGO ALPHA.png"
+                alt="LogoGRAIndustries"
+            /></a>
+          </li>
+          <li><a href="Index.html" title="Regresa a Inicio">Inicio</a></li>
+          <li>
+            <a href="SobreMi.html#Prime">Sobre Mi</a>
+            <ul class="Submenu">
+              <li><a href="SobreMi.html#Prime"> Resumen</a></li>
+              <li><a href="SobreMi.html#Experiencias"> Experiencia</a></li>
+              <li><a href="SobreMi.html#Formacion"> Formacion</a></li>
+              <li><a href="SobreMi.html#Habilidades"> Habilidades</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Portafolio.html">Portafolio</a>
+            <ul class="Submenu">
+              <li><a href="Illus.html"> Illustraciones</a></li>
+              <li></li>
+              <li>
+                <a href="CompMG.html">Composicion /Motion Graphics</a>
+              </li>
+              <li><a href="Ani3d.html">Animación 3D</a></li>
+              <li><a href="Ani2d.html">Animación 2D</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="OtrosProyectos.html">Otros Proyectos</a>
+            <ul class="Submenu">
+              <li><a href="Skillquest.html">SkillQuest</a></li>
+              <li><a href="Makerzone.html">Makerzone</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#Contacto" id="BContacto">Contacto</a></li>
+          <li class="MenuBar">
+            <a href="#MobileNav" id="menuIcon">
+              <i class="fa-solid fa-bars fa-2xl"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="Cont">
+      <section id="MainPort" class="MainPort">
+        <div class="FPort">
+          <section class="Prime" id="Prime">
+            <h1>Portafolio</h1>
+          </section>
+          <ul class="SliderPort">
+            <li>
+              <a href="Illus.html" title="Illustracion"
+                ><h2>Illustraciones</h2></a
+              >
+            </li>
+            <li>
+              <a href="CompMG.html" title="Composicion"
+                ><h2>Composicion / Motion Graphics</h2></a
+              >
+            </li>
+            <li>
+              <a href="Ani3d.html" title="Animación 3D"
+                ><h2>Animación 3D</h2></a
+              >
+            </li>
+            <li>
+              <a href="Ani2d.html" title="Animación 2D"
+                ><h2>Animación 2D</h2></a
+              >
+            </li>
+          </ul>
+          <a href="#Contacto" target="_blank">
+            <h3>Buscas Realizar un Proyecto</h3>
+          </a>
+          <div class="slider-nav">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="PortIntro" id="Illus">
+        <h1>Illustracion</h1>
+        <div class="conjuntoIntro">
+          <div class="GaleriaIntro">
+            <div class="FGPort" id="G01">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\German 20 Años.png"
+                data-fancybox="Portafolio"
+                data-caption="Illustracion: German 20 Años"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\German 20 Años.png"
+                  alt="German 20 años Illustracion"
+              /></a>
+            </div>
+            <div class="FGPort" id="G02">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Composición Duelo de Titanes.jpg"
+                data-fancybox="Portafolio"
+                data-caption="Illustracion: Duelo de Titanes"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Composición Duelo de Titanes.jpg"
+                  alt="Poster Duelo de Titanes"
+              /></a>
+            </div>
+            <div class="FGPort" id="G03">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Into the Glitch Video_00222.png"
+                data-fancybox="Portafolio"
+                data-caption="Illustracion: Into the Glitch"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Into the Glitch Video_00222.png"
+                  alt="Poster Into the Glitch"
+              /></a>
+            </div>
+            <div class="FGPort" id="G04">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Thor love and thunder GRA.jpg"
+                data-fancybox="Portafolio"
+                data-caption="Illustracion: German Fun and Thunder"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Thor love and thunder GRA.jpg"
+                  alt="German Fun and Thunder Poster"
+              /></a>
+            </div>
+          </div>
+          <article class="InfoPortInfo">
+            <div class="InfoStiky">
+              <h2>
+                "Un mundo de historias en una sola imagen: donde la ilustración
+                cobra vida inspirada en el poder del cine y las series."
+              </h2>
+              <p>
+                Mi trabajo de ilustración y diseño de posters está enfocado en
+                crear imágenes que capturan historias completas inspiradas en el
+                mundo del cine y las series. Cada ilustración que realizo busca
+                transmitir la esencia y emoción de una película o serie en una
+                sola imagen, como si fuera un póster de impacto. Me inspiro en
+                diversos géneros y estilos visuales presentes en el cine y la
+                televisión para crear composiciones visuales que atrapen la
+                atención del espectador. Cada detalle, desde la elección de
+                colores hasta la disposición de los elementos, se cuida con
+                esmero para lograr un impacto visual duradero. Mi objetivo es
+                llevar a las personas en un viaje a través de la imaginación,
+                permitiéndoles conectarse con sus películas y series favoritas
+                de una manera única y artística.
+              </p>
+              <h3><a href="Illus.html"> Conoce más</a></h3>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="PortIntro" id="CompMG">
+        <h1>Composición y Motion Graphics</h1>
+        <div class="conjuntoIntro">
+          <article class="InfoPortInfo">
+            <div class="InfoStiky">
+              <h2>
+                "Creando composiciones visuales dinámicas, fusionando gráficos
+                en historias cautivadoras."
+              </h2>
+              <p>
+                "Mi pasión por el trabajo de composición y motion graphics me
+                impulsa a explorar constantemente nuevas formas de contar
+                historias a través de la edición de video y la implementación de
+                elementos visuales. Me encanta combinar diferentes elementos,
+                como imágenes, gráficos y efectos especiales, para crear una
+                experiencia visualmente impactante y envolvente. Mi enfoque se
+                centra en la creación de narrativas sólidas y coherentes,
+                utilizando técnicas de composición y animación para transmitir
+                emociones y mensajes de manera efectiva. Desde la planificación
+                del concepto hasta la etapa de postproducción, disfruto de todo
+                el proceso creativo y me dedico a perfeccionar cada detalle para
+                lograr resultados de alta calidad. Mi portafolio incluye una
+                variedad de proyectos donde he aplicado mis habilidades en
+                composición y motion graphics, desde cortometrajes y comerciales
+                hasta intros y animaciones promocionales. Cada proyecto es una
+                oportunidad para explorar nuevas técnicas, aprender y crecer
+                como profesional en el campo del diseño audiovisual".
+              </p>
+
+              <h3><a href="CompMG.html">Conoce más</a></h3>
+            </div>
+          </article>
+          <div class="GaleriaIntro">
+            <div class="FGPort" id="G01">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Que Pasaria Si GRA.png"
+                data-fancybox="Portafolio"
+                data-caption="Composición: Que Pasaria Si... GRA?"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Que Pasaria Si GRA.png"
+                  alt="Que pasaría si GRA Frame"
+              /></a>
+            </div>
+
+            <div class="FGPort" id="G02">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Spot Barritas Gra Final_01582.jpg"
+                data-fancybox="Portafolio"
+                data-caption="Composición: Barritas GRA"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Spot Barritas Gra Final_01582.jpg"
+                  alt="Barritas GRA Frame"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="PortIntro" id="ANI3D">
+        <h1>Animacion 3D</h1>
+        <div class="conjuntoIntro">
+          <div class="GaleriaIntro">
+            <div class="FGPort" id="G01">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\3D\Lateral.png"
+                data-fancybox="Portafolio"
+                data-caption="Animación 3D: Christmas Speed"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\3D\Lateral.png"
+                  alt="Christmas Speed proyecto"
+              /></a>
+            </div>
+            <div class="FGPort" id="G02">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\3D\Frame Ajolotes 1.png"
+                data-fancybox="Portafolio"
+                data-caption="Animación 3D:Cortometraje Manahuia"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\3D\Frame Ajolotes 1.png"
+                  alt="Manahuia, cortometraje, frame"
+              /></a>
+            </div>
+            <div class="FGPort" id="G03">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\3D\Christmass Speed 01.png"
+                data-fancybox="Portafolio"
+                data-caption="Animación 3D: Christmas Speed"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\3D\Christmass Speed 01.png"
+                  alt="Christmas Speed Proyecto"
+              /></a>
+            </div>
+            <div class="FGPort" id="G04">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\3D\Interior 03.png"
+                data-fancybox="Portafolio"
+                data-caption="Animación 3D: The all Powerfull Witch"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\3D\Interior 03.png"
+                  alt="The all powerfull witch proyecto"
+              /></a>
+            </div>
+          </div>
+          <article class="InfoPortInfo">
+            <div class="InfoStiky">
+              <h2>
+                "Adentrándome en la magia del 3D, explorando un universo
+                texturizado donde cada detalle cobra vida y da vida a un mundo
+                imaginativo."
+              </h2>
+              <p>
+                "La animación 3D es un tema que me apasiona y en el que disfruto
+                trabajar. Tengo un gran interés en el poder de las texturas para
+                dar vida a los objetos y construir mundos envolventes. Me
+                encanta organizar los elementos visuales y contar historias a
+                través de la combinación de texturas y modelos. Creo que el
+                texturizado adecuado y la atención al detalle pueden transportar
+                a la audiencia a un universo imaginario, sumergiéndolos en una
+                experiencia única. Trabajo con entusiasmo para crear atmósferas
+                y narrativas cautivadoras donde la audiencia pueda sumergirse y
+                explorar."
+              </p>
+              <h3><a href="Ani3d.html">Conoce más</a></h3>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="PortIntro" id="ANI2D">
+        <h1>Animación 2D</h1>
+        <div class="conjuntoIntro">
+          <article class="InfoPortInfo">
+            <div class="InfoStiky">
+              <h2>
+                "Con trazos y colores, doy vida a universos llenos de encanto y
+                emoción en la animación 2D, transportando al espectador a un
+                viaje de imaginación y asombro."
+              </h2>
+              <p>
+                Durante mi trayectoria en la animación 2D, me he enfocado en
+                desarrollar conceptos visuales cautivadores y utilizar una
+                variedad de herramientas para contar historias de manera
+                impactante. Mi trabajo se centra en la creación de mundos
+                fascinantes y en transmitir mensajes emocionales a través del
+                poder de la animación. Busco conectar con la audiencia,
+                generando conciencia sobre temas relevantes y creando
+                experiencias visuales memorables. Mi pasión radica en explorar
+                diferentes estilos artísticos y técnicas narrativas para
+                construir narrativas visuales que atrapen la imaginación de
+                quienes las experimentan.
+              </p>
+              <h3><a href="Ani2D.html">Conoce más</a></h3>
+            </div>
+          </article>
+          <div class="GaleriaIntro">
+            <div class="FGPort" id="G01">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Animacion\Secuencia de holograma parte 2.gif"
+                data-fancybox="Portafolio"
+                data-caption="Cortometraje: Defensores Del Futuro"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Animacion\Secuencia de holograma parte 2.gif"
+                  alt="Secuencia Holograma defensores del Futuro"
+              /></a>
+            </div>
+            <div class="FGPort" id="G02">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Animacion\Robocat Ojos 2.gif"
+                data-fancybox="Portafolio"
+                data-caption="Cortometraje: Defensores Del Futuro"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Animacion\Robocat Ojos 2.gif"
+                  alt="Efecto ojos digitales Defensores del Futuro"
+              /></a>
+            </div>
+            <div class="FGPort" id="G03">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Animacion\Logo Florecer_1.gif"
+                data-fancybox="Portafolio"
+                data-caption="Cortometraje: Florecer"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Animacion\Logo Florecer_1.gif"
+                  alt="Florecer Logo Animation"
+              /></a>
+            </div>
+            <div class="FGPort" id="G04">
+              <a
+                class="FancyBoxGA"
+                href="Assets\IMG\Animacion\Ojos De Acordeón01.gif"
+                data-fancybox="Portafolio"
+                data-caption="Cortometraje: Florecer"
+                title="Galería"
+                ><img
+                  src="Assets\IMG\Animacion\Ojos De Acordeón01.gif"
+                  alt="Ojos de gato Animacion Florecer"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="success-message" style="display: none">
+        <p>¡Gracias por contactarme!</p>
+        <p>Me pondré en contacto contigo pronto.</p>
+      </div>
+      <div id="error-message" style="display: none">
+        <p>Ha ocurrido un error al enviar el formulario.</p>
+        <p>Por favor, inténtalo de nuevo más tarde.</p>
+      </div>
+
+      <section class="Contacto ContactoSM" id="Contacto">
+        <h3>Contacto</h3>
+        <div class="ContactoCont">
+          <div class="MsgContacto">
+            <p>"¡Estoy emocionado de escuchar de ti!</p>
+            <p>
+              Si tienes alguna pregunta, consulta o simplemente quieres saludar,
+              no dudes en contactarme. Estoy aquí para ayudar.
+            </p>
+          </div>
+
+          <form
+            class="ContForm"
+            id="my-form"
+            action="https://formspree.io/f/myyaqava"
+            method="POST"
+          >
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="name"
+              placeholder="Ingresa tu nombre"
+              required
+            />
+
+            <label for="correo">Correo electrónico:</label>
+            <input
+              type="email"
+              id="correo"
+              name="email"
+              placeholder="Ingresa tu correo electrónico"
+              required
+            />
+
+            <label for="asunto">Asunto:</label>
+            <input
+              type="text"
+              id="asunto"
+              name="subject"
+              placeholder="Ingresa el asunto"
+              required
+            />
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="message"
+              placeholder="Ingresa tu mensaje"
+              required
+            ></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="FConts">
+        <div class="f" id="F01">
+          <a href="#" class="LOGO"
+            ><img
+              src="Assets\IMG\GRA Industries LOGO ALPHA.png"
+              alt="LogoGRAIndustries"
+          /></a>
+          <p>© 2023 GRA Industries</p>
+        </div>
+        <div class="f" id="F02">
+          <h3>Contacto</h3>
+          <p id="email" title="Copiar Correo">germanrosendo.arrona@gmail.com</p>
+        </div>
+        <div class="f" id="F03">
+          <h3>Ligas</h3>
+          <a href="https://www.instagram.com/gros2703/">
+            <i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a href="#Experiencias">
+            <i class="fa-brands fa-square-behance"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/channel/UCGvf9wmxvkCK4mtcE2_HKkQ"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://www.twitch.tv/germanra23">
+            <i class="fa-brands fa-twitch"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Código JavaScript
+      });
+    </script>
+  </body>
+</html>

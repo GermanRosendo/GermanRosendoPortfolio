@@ -1,0 +1,1354 @@
+body::-webkit-scrollbar{
+  width: 10px;
+  background-color: #051b18;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #0E8388;
+  border-radius: 10px;
+  border-right: 3px solid #051b18;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('Assets\Fonts\Bebas-Regular.otf') format('otf'),
+   
+}
+:root{
+  --Titulo01: 200px;
+  --Titulo02: 90px;
+  --Heading01: 60px;
+  --Heading02: 40px;
+  --Texto01: 40px;
+  --texto02: 20px;
+}
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  background: rgb(44,46,67);
+  color: #E6E6E6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; 
+}
+h1, h2, h3{
+  letter-spacing: 0.06em;
+}
+/* Estilo para el contenido del tooltip del atributo title */
+
+.SMBody{
+  background-color: #2C3143;
+}
+  body a{
+    color: inherit;
+    text-decoration: none;
+  }
+  .Cont{
+    width: 88%;
+    margin: 150px auto 0;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(178, 177, 185, 0.965);
+    z-index: 3;
+    height: 15%;
+    padding: 5px;
+}
+/*   section[id]{
+    scroll-margin-top: 15%;
+  } */
+/* Bar Menu */
+.MobileNav{
+  position: fixed;
+  background-color: rgba(178, 177, 185, 0.965);
+  height: 100vh;
+  width: min-content;
+  padding: 2%;
+  z-index: 4;
+  display: none;
+}
+.MobileNav.active {
+  display: block; /* Muestra la barra lateral cuando tiene la clase 'active' */
+}
+  .MobileNav ul {
+    list-style-type: none;
+    width: max-content;
+    margin: auto;
+    padding: 0;
+    display: flex;
+     align-items: center;
+     flex-direction: column;
+  }
+  .MobileNav section{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .MobileNav li{
+    margin-top: 2.5em;
+  }
+
+
+  .MobileNav a {
+    text-decoration: none;
+    color: #333;
+    font-size:25px;
+    padding: 5px;
+  }
+
+  .MobileNav img{
+    width: 80px ;
+    padding: 5px;
+  }
+  .MobileNav .LOGO{
+display: block;
+align-items: center;
+
+  }
+  .MobileNav .MenuBar {
+    padding: 12px;
+  }
+  
+  .MobileNav a:hover {
+    background-color: #82858D;
+    text-decoration: underline 3px;
+    border-radius: 25px;
+  }
+  .LOGO:hover {
+    background-color: #ddd;
+  }
+  .MobileNav .Submenu{
+    display: none;
+    border-radius: 20px;
+    padding: 1%;
+    z-index: 2;
+  }
+  /* .MobileNav:hover .Submenu{
+    display: block;
+    width: auto;
+    background-color: #ddd;
+    position: fixed;
+  } */
+  .MobileNav ul{
+    margin-left: 15px;
+  }
+  #BContacto{
+    color: #E6E6E6;
+    background-color: #595260;
+    border-radius: 25px;
+    padding: 5%;
+    position: relative;
+    z-index: 1;
+  }
+
+/* Bar Menu */
+nav ul {
+  list-style-type: none;
+  width: 88%;
+  margin: auto;
+  padding: 0;
+  display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+nav section{
+  display: flex;
+  justify-content: flex-end;
+}
+nav li {
+  margin-right: 6em;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 32px;
+  padding: 5px;
+}
+
+nav img{
+  width: 100px ;
+  padding: 5px;
+}
+.LOGO{
+display: block;
+align-items: center;
+}
+.MenuBar {
+  padding: 12px;
+}
+
+nav a:hover {
+  background-color: #82858D;
+  text-decoration: underline 3px;
+  border-radius: 25px;
+}
+.LOGO:hover {
+  background-color: #ddd;
+}
+.Submenu{
+  display: none;
+  border-radius: 20px;
+  padding: 1%;
+}
+li:hover .Submenu{
+  display: block;
+  width: auto;
+  background-color: #ddd;
+  position: fixed;
+}
+.Submenu ul{
+  margin-left: 15px;
+}
+#BContacto{
+  color: #E6E6E6;
+  background-color: #595260;
+  border-radius: 25px;
+  padding: 10%;
+}
+/* Prime foto */
+
+  .Prime{
+    /* background-color: #2c41438a;  */
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .VideoDemo {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: #5050507c;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Combina las propiedades de transición en una sola definición */
+    z-index: 4;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .VideoDemo.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .VideoDemo video {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    width: 80%;
+  }
+  
+  
+#Demo{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0%;
+}
+.close i{
+  position:fixed;
+  font-size: 50px;
+}
+.close i:hover{
+  color: #0E8388;
+  font-size: 60px;
+}
+  .MarcoFoto{
+    justify-content: center;
+    width: auto;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    flex: .8;
+  }  
+  .FotoCirculo {
+    width: 80%; /* Ajusta el valor según tus necesidades */
+    padding-bottom: auto; /* Ajusta el valor para mantener la proporción circular */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color:#424052;
+  }
+  
+  .FotoCirculo img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    object-fit: cover;
+  }
+  .Nombre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .SMBody .Nombre{
+    position: relative;
+    left: 5%;
+    flex: .2;
+  }
+  .Nombre h1{
+    margin: 0%;
+    margin-top: 15px;
+    font-size: var(--Titulo01);
+  }
+  .Nombre h2{
+    font-size: var(--Titulo02);
+    margin:0%;
+  }
+  #Prime01{
+    font-size: var(--Titulo02);
+    flex: 1;
+    margin: 0;
+    align-items: start;
+  }
+  #Prime03 {
+    font-size: var(--Heading01);      
+  }
+#Prime03 p{
+  margin: 10px;
+}
+#playButton{
+  display: flex;
+  justify-content: end;
+  color: #E6E6E6;
+  font-size:60px ;
+}
+#playButton p{
+  text-decoration: underline 2px;
+  text-underline-offset: 10px;
+}
+#playButton i{
+  position: relative;
+  align-self: center;
+  text-decoration: none;
+}
+#Demo a:hover{
+background: #424052;
+color: #82858D;
+border-radius: 20px;
+cursor: pointer;
+}
+.Flecha{
+  flex: auto;
+  justify-content: center;
+}
+.Flecha a{
+  margin: 0;
+  font-size: var(--Heading01);
+color: #ddd;
+display: flex;
+justify-content: center;
+position: relative;
+top: -30px;
+width: auto;
+}
+#FAbajo{
+font-size: var(--Heading01);
+color: #ddd;
+}
+#FAbajo:hover{
+opacity: .6;
+cursor: s-resize;
+}
+/* |Prime, o Primera parte de nombre , más foto 
+
+Seccion Sobre Mi*/
+.SobreMi{
+  background-color: #424052;
+  border-radius: 50px;
+}
+.ContSobreMi{
+ display: flex;
+}
+.Frase{
+  position: relative;
+  padding-top: 2%;
+  margin: 0%;
+  left: 5%;
+  font-style:italic;
+  font-weight: lighter;
+  font-size: calc(var(--Heading01)*.9);
+}
+.Frase h2{
+  margin: 0%;
+}
+.FotoSobremi{
+  display: flex;
+  justify-content: end;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  z-index: 2;
+} 
+.FotoSobremi img{
+  width: 83% ;
+  height: 100%;
+  object-fit: cover;
+  display: inline-block;
+  object-position: 100% 0%;
+  filter: drop-shadow(10px 7px 2px 16px rgba(0, 0, 0, 0.5));
+}
+.FSM02{
+  
+  width: 750px;
+  aspect-ratio: 1;
+  position: relative;
+  display: inline;
+  top: -43%;
+  left: 20%;
+  overflow: visible;
+
+}
+.FSM02 img{
+  filter: drop-shadow(10px 7px 2px 16px rgba(0, 0, 0, 0.5));
+  width: 100% ;
+  height: 150%;
+  object-fit: cover;
+  display: inline-block;
+  object-position: 100% 0%; 
+  margin: 0;
+}
+.TextoSobreMi{
+  width: 40%;
+  margin: auto;
+  padding: 2%;
+}
+.TextoSobreMi p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: calc(var(--Texto01)*.7);
+}
+.SobreMi a{
+  display: flex;
+  justify-content: center;
+  font-size: calc(var(--Heading02)*.7);
+}
+.SMBody .SobreMi h3 {
+  display: inline-block;
+  position:relative;
+  top: 100px;
+  left: -120px;
+  height: fit-content;
+} 
+.SobreMi h3{
+  background-color: #CBE4DE;
+  color: #2C3333;
+  padding: 6px 112px 6px 22px;
+  border-radius: 20px;
+  margin: 1%;
+  position: relative;
+  bottom: 15px;
+}
+.SobreMi h3:hover{
+  color: #2C2E43;
+  background-color: #82858D;
+  text-decoration: underline;
+  transition: color 1s;
+}
+/* termina sobre main
+comienza pre portafolio */
+.PrePort{
+  /* background-color: #333; */
+  justify-content: center;
+}
+.PrePort h2{
+  font-size: var(--Heading01);
+  margin: 2%;
+  align-items: start;
+}
+.Portafolio01{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-arround;
+  margin: 0%;
+
+}
+.ContPort{
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-bottom: 3%;
+  width: 40%;
+  align-self: center;
+  align-content: center;
+  height: 480px;
+  /* padding-top: calc(100% / (40 / 1.9)); */
+  overflow: hidden;
+}
+.PortInfo{
+  background-color: #1d050567;
+  align-content: start;
+  margin: auto;
+  text-align: center;
+  font-size: calc(var(--Heading02)*.8);
+  padding: 2%;
+  width: 100%;
+  height: auto;
+  text-shadow: 2px 2px 4px #000000;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+.ContPort:hover .PortInfo{
+  opacity: 1;
+}
+.ContPort img {
+  transition: transform 0.5s ease;
+}
+.ContPort:hover .ImgPort img {
+  transform: scale(1.04);
+}
+
+.PrePort img{
+  display: inline-block;
+  object-fit: cover;
+  width: 100%;
+  transition: width 0.3s ease;
+}
+.Frame img{
+  background-color: #000000;
+  width: inherit ;
+  height: auto;
+  display: block;
+  margin-top: 8%;
+  margin-bottom: 5%;
+}
+.ImgPort{
+  position: absolute;
+  align-content: center;
+  align-self: center;
+  margin: auto;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  z-index: -1; 
+  object-fit: cover;
+}
+.ContPort a{
+  display: inline-block;
+  object-fit: cover;
+  width: inherit;
+  height: auto;
+}
+#Port01{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#Port03 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#Port06 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#Port08 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#Port09 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+/* Termina Portafolio Aqui
+Empieza Más Proyectos*/
+.Otrosproyectos h2{
+  font-size: var(--Heading01);
+  padding-left:3%;
+}
+.OtrosProyectoa p{
+  font-size: var(--texto02);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: justify;
+}
+.OtrosProyectoa {
+  display: flex;
+  margin: 1%;
+  flex-wrap: wrap;
+}
+
+ .OtrosProyectoa article:hover{
+  background-color: #666475;
+} 
+.OtrosProyectoa article{
+  width: 40%;
+  margin: 2%;
+  padding: 2%;
+  background-color: #424052;
+  border-radius: 50px;
+  height: auto;
+}
+.OtrosProyectoa h3{
+  font-size: 40px;
+}
+.Galeria{
+  width: 100%;
+  height: 300px;
+  background-color: #b2b1b9f6;
+  display: flex;
+}
+.carousely img{
+  max-width: 600px;
+  max-height: 300px;
+}
+.carousely{
+  background-color: #6d6d6d;
+  display: block;
+  margin: 2%;
+  padding: 2%;
+}
+ .carousely button{
+  height: fit-content;
+  width: fit-content;
+} 
+
+/*Termina mas Proyectos
+Empiexa seccion de Contacto */
+.ContactoCont{
+  display: flex;
+  align-content: center;
+}
+.Contacto{
+  background-color: #424052;
+  border-radius: 50px;
+}
+.ContactoSM{
+  background-color: #3D5660;
+}
+.Contacto h3{
+  padding: 1%;
+  text-align: center;
+  font-size: var(--Heading01);
+  flex-grow: 10;
+  margin: 0;
+}
+.MsgContacto{
+  flex-grow: 1;
+  width: 60%;
+  flex-grow: 1;
+  margin: 2px 0 0 0;
+  font-size: var(--Heading02);
+  padding: 5%;
+  line-height: 1.5em;
+}
+.ContForm{
+  display: flex;
+  flex-direction: column;
+  background-color: #19181d4b ;
+  border-radius: 20px;
+  margin: 1%;
+  margin-right: 5%;
+  padding: 2%;
+  width: 90%;
+  flex-grow: 1;
+}
+form input{
+  display: block;
+  margin: auto;
+  background-color: #000;
+  border: 1px solid #E6E6E6;
+  font-size: calc(var(--texto02)*.7);
+  color: white;
+  width: 95%;
+  height: 35px;
+  overflow: hidden;
+  text-align: start;
+  background-color: transparent;
+  padding: 1%;
+}
+form label{
+  justify-content: flex-start;
+  text-align: start;
+  font-size: calc(var(--Texto01)*.7);
+  margin-left: 2%;
+
+}
+#mensaje{
+  font-family: Arial ;
+  width: 95%;
+  height: 120px;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: transparent;
+  font-size: calc(var(--texto02)*.7);
+  color: white;
+  border: 1px solid #E6E6E6;
+  padding: 1%;
+}
+button{
+  font-family: 'Bebas Neue', sans-serif;;
+  font-size: calc(var(--Texto01)*.7);
+ background-color: #CBE4DE;
+ padding: 8px 10px;
+ width: 30%;
+ color:  #2C3333;
+ border: none;
+ border-radius: 50px;
+ text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+ box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.45);
+}
+button:hover{
+background-color:#178678;
+color: white;
+box-shadow: 0 0 5px #ddd;
+border-radius: 80px;
+cursor: pointer;
+} 
+button:active{
+  background-color: rgb(86, 97, 97);
+}
+/* Termina Contacto */
+footer {
+  background: rgb(104, 152, 198);
+  background: linear-gradient(180deg, rgba(104, 152, 198, 0) 0%, rgba(185, 177, 184, 1) 90%);
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  color: #000000;
+}
+
+.FConts{
+  display: flex;
+  justify-content:space-around;
+} 
+.FConts img{
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+.f{
+  padding: .2%;
+}
+.f h3{
+  font-size: calc(var(--Heading02)*.7);
+}
+
+.f i{
+  position: relative;
+  font-size: calc(var(--Heading01)*.7);
+  margin: 1%;
+  top: -20%;
+}
+#F03{
+  width: 20%;
+} 
+#email{
+  color: #051b18;
+  cursor: pointer;
+}
+.copied {
+  background-color: royalblue;
+}
+
+/*Inicia Segunda Página Sobre Miii
+Segunda página
+Segundapágina*/
+.SMCont{
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+.SMCont section{
+  margin: 2%;
+}
+
+.SMCont h1 {
+  margin: auto;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Bebas Neue";
+}
+
+.SMCont h2 {
+  font-size: 30px;
+  margin: 0;
+  font-family: "Bebas Neue";
+}
+.SMCont article{
+  background-color: #82CFD6;
+  color: #2C3333;
+  border-radius: 20px;
+}
+.SMCont p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-align:justify;
+font-size: 18px;
+}
+.Experiencias article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin: 2%;
+  padding: 1%;
+  width: 90%;
+  min-height: 80px;
+}
+.Columna{
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+}
+
+.Experiencias .Cortos, .Experiencias .Parti {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  width: 80%;
+}
+/* Termina Experiencia, Empieza Viajes */
+
+.Viajes div {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.VImg{
+  border-radius: 40px 40px 0 0;
+  width: auto;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2%;
+  position: relative;
+  top: -10px;
+}
+.VImg img{
+  min-width: 300px;
+  width: 120%;
+}
+#Exp01, #Exp2, #Exp03{
+  flex: 1;
+  display: inline-block;
+  align-items: flex-end;
+  position:absolute;
+  transform: rotate(-180deg);
+  writing-mode:vertical-rl; /* Rotación de 90 grados */
+  transform-origin: left; /* Punto de origen de la rotación */
+}
+.Cortos,  .Parti{
+  width: 50%;
+   display: flex;
+   margin: auto;
+   align-items: center;
+   margin-top: 2%;
+   margin-bottom: 5%;
+}
+.ProyectosO{
+  display:flex;
+  align-items: center;
+  margin-top: 2%;
+   margin-bottom: 5%;
+}
+.Viajes h2{
+  font-size: 25px;
+  margin: 2%;
+  font-weight: lighter;
+}
+
+.Viajes .Ciudad{
+  font-size: 40px;
+}
+.Viajes article{
+  min-height: 500px;
+}
+/* Termina Viajes, Empieza Formación */
+.Habilidades{
+  display: flex;
+  margin: auto 2%;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+.Habilidades article{
+  display: flex;
+  flex-direction: column;
+
+  background-color: transparent;
+  border: solid 5px #82CFD6;
+  color:#E6E6E6 ;
+  min-height: 300px;
+  min-width: 300px;
+}
+.Idiomas article, .Software article{
+color: #E6E6E6;
+background-color: #3D5660;
+}
+.Idiomas .content, .Software .content{
+  background-color: #3D5660;
+  border-radius: 50px;
+  padding: 2%;
+}
+.Formacion {
+  display: flex;
+}
+
+.Formacion article {
+  width: 90%;
+  display: flex;
+  text-align: left;
+  padding: 2%;
+  flex-flow: column;
+}
+
+.FCont {
+  display: flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Formacion article:hover {
+  background-color: #424052;
+  cursor: pointer;
+}
+.Habilidades .ico{
+  font-size: 80px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding-top: 1%;
+}
+.Habilidades h2{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10%;
+}
+/* Termina Habilidades, Empieza Idiomas */
+.MasActividade article{
+  width: 450px;
+  padding: 1%;
+}
+.MasActividade , .Formacion, .Viajes{
+  display: flex;
+  margin: auto;
+  gap: 2%;
+  flex-wrap: wrap; /* Permitir que los artículos se envuelvan a la siguiente línea */
+}
+
+.Idiomas .titles,
+.Software .titles,
+.MasActividade .titles,
+.Habilidades .titles,
+.Formacion .titles,
+.Viajes .titles {
+  flex: 0 0 100%; /* El título ocupa todo el ancho disponible en una sola línea */
+  font-family:inherit
+}
+
+.Idiomas .content,
+.Software .content,
+.MasActividade .content,
+.Habilidades .content,
+.Formacion .content,
+.Viajes .content {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: space-around;
+  font-family: inherit;
+}
+
+.Idiomas article,
+.Software article,
+.MasActividades article,
+.Habilidades article,
+.Formacion article,
+.Viajes article {
+  flex: 0 0 calc(20% - 2%); /* Cada artículo ocupa el 20% del ancho disponible con un margen de 2% */
+}
+
+.EXP {
+  display: flex;
+  margin: auto;
+  gap: 2%;
+}
+
+.EXP article {
+  width: 25%;
+  display: block;
+  text-align: justify;
+  padding: 2%;
+  flex-flow: column;
+}
+
+.EXP article:hover {
+  background-color: #a2a1ad;
+  cursor: pointer;
+}
+ .Experiencias .ECont,
+.VCont,
+.FCont,
+.HCont,
+.MACont,
+.WCont {
+  display: flex;
+  text-align: justify;
+  display: none;
+  margin: 5%;
+  width: 90%;
+  
+} 
+
+.MSMCont h3{
+  background-color: #0E8388;
+  color: #E6E6E6;
+  padding: 2%;
+  border-radius: 20px;
+  font-size: 15px;
+  width: fit-content;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+}
+.MSMCont :hover{
+  background-color: #178678;
+}
+.SMCont article.active {
+  background-color: #ccc;
+}
+.Habilidades article.active {
+  background-color: transparent; /* Color de fondo original para el HCont */
+}
+.Viajes, .Formacion, .MasActividade .Software{
+  display: flex;
+  margin: auto;
+}
+.Experiencias article:hover, .Viajes article:hover, .Formacion article:hover, .MasActividade article:hover{
+  background-color: #a2a1ad;
+  cursor: pointer;
+}
+.Habilidades article:hover{
+  background-color: #2b2b2e;
+  cursor: pointer;
+}
+/*Termina lapágina de Sobre mi
+Inicia página sobre Portafolio*/
+.MainPort h1{
+  font-size: 68px;
+  margin: 3%;
+}
+.PortIntro h1{
+  font-size: 40px;
+}
+.conjuntoIntro{
+  display: flex;
+  gap: 2%;
+}
+.GaleriaIntro {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 2%;
+  align-content: center;
+}
+
+.FGPort {
+  display: flex;
+  flex-basis: calc(50% - 2%);
+  height: 0;
+  padding-bottom: 50%;
+  background-color: #ccc;
+  margin-bottom: 2%;
+  color: #333;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.FGPort img {
+  display: block;
+  position: relative;
+  margin: auto;
+  margin-top: 2%;
+  width: 100%;
+  height  : 100%; 
+  object-fit: cover; 
+  overflow: hidden;
+}
+
+/* Estilos adicionales para las imágenes dentro de los divs (reemplaza con tus estilos) */
+.MainPort {
+  position: relative;
+  width: 92vw;
+left: -6vw;
+height: 50vh;
+overflow-x: hidden;
+padding: 1% 5%;
+display: flex;
+flex-direction: column;
+align-items: start;
+overflow-y: hidden;
+justify-content: space-evenly;
+ }
+ .PortBodyInt .MainPort, .IllusBody .MainPort{
+  height: 30vh;
+  justify-content: space-evenly;
+ }
+ .PortBodyInt .MainPort h2, .IllusBody .MainPort h2{
+font-size: 30px;
+ }
+
+/*Termina Inicio Portafolio
+Empieza Secciones individuales de portafolio*/
+/*Web banner sliders de secciones*/
+#MainPort.slide1 {
+  background-color: rgb(83, 33, 33);
+  transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+#MainPort.slide2 {
+  background-color: rgb(11, 77, 41);
+  transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+#MainPort.slide3 {
+  background-color: rgb(25, 11, 63);
+  transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+#MainPort.slide4 {
+  background-color: rgb(121, 105, 34);
+  transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.MainPort ul{
+  position: relative;
+}
+
+.MainPort ul li {
+  list-style: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.MainPort ul li.active {
+  opacity: 1;
+}
+
+.MainPort ul li h2 {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  position:absolute;
+  top: -60px;
+  font-size: 38px;
+  width: 200%;
+}
+
+.FPort{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.MainPort ul li.active h2 {
+  transform: translateX(0%);
+}
+.slider-nav{
+  display: flex;
+  justify-content: space-around;
+  align-content: end;
+position: relative;
+  font-size: 35px;
+  margin-top: 10px;
+}
+.slider-nav i {
+  margin: 0 5px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slider-nav i:hover{
+  color: #0E8388;
+  opacity: .9;
+  cursor: pointer;
+}
+.slider-nav i:active{
+  color: #333;
+  font-size: 40px;
+  opacity: 1;
+}
+
+
+/*Termina Web banner slider*/
+.conjuntoIntro article{
+  flex: 1;
+  gap: 3%;
+  font-size: 22px;
+  width: 100%;
+}
+.InfoPortInfo {
+  min-height: 100%;
+  padding: 2%;
+  border-radius: 40px;
+}
+#Illus .InfoPortInfo{
+  background-color: rgb(83, 33, 33);;
+}
+#CompMG .InfoPortInfo{
+  background-color: rgb(11, 77, 41);
+}
+#ANI3D .InfoPortInfo{
+  background-color: rgb(25, 11, 63);
+}
+#ANI2D .InfoPortInfo{
+  background-color: rgb(121, 105, 34);
+}
+.InfoStiky {
+  position: sticky;
+  top: 20%; /* Ajusta este valor según sea necesario */
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.conjuntoIntro h2{
+  font-size: 35px;
+}
+.conjuntoIntro h3{
+  background-color: #0E8388;
+  width: 20%;
+  padding: 1%;
+  border-radius: 20px;
+}
+.conjuntoIntro h3:hover{
+  background-color: #4f5763;
+}
+.PortElement h1{
+  font-size: 45px;
+}
+.PERow{
+  display: flex;
+  gap: 2%;
+}
+.PERow div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.MainElement{
+  min-width: 800px;  
+ height: 100%;
+  background-color: #353935;
+}
+.IllusBody .MainPoster img{
+  display: block;
+  margin: auto;
+  width: 600px;
+  position: sticky;
+  top: 10vh;
+  bottom: 2vh; 
+}
+.IllusBody .MainPoster a, .MainElement a {
+  position: sticky;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+  z-index: 2;
+}
+.MainPoster{
+  display: block;
+  width: 100%;
+  background-color: #353935;
+  
+}
+.FancyBoxG{
+  position: sticky;
+  top: 10vh;
+  bottom: 2vh;
+}
+.MainElement img{
+  display: block;
+  position: sticky;
+  top: 10vh;
+  bottom: 2vh;
+  margin: auto;
+  width: 700px;
+  height:auto;
+}
+.Carousel .lazy {
+  display: none;
+}
+.PortElement .PMedia img{
+   max-width: 48vw;
+  max-height: 70vh;
+}
+.PMedia{
+  flex: 1;
+}
+.PEInfo{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.PEInfo div{
+  display: flex;
+  gap: 5%;
+}
+.PERow h3{
+  font-size: 30px;
+  padding: 6px 112px 6px 22px;
+  border-radius: 20px;
+  width: fit-content;
+  color: #2C3333;
+  background-color: #CBE4DE;
+  margin-left:4%
+}
+.PERow p{
+  font-family: 'Saira';
+  font-size: 25px;
+}
+.PERow h2{
+  font-size:  40px;
+  letter-spacing: 2px;
+}
+.PMedia{
+  background-color: #353935;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 2%;
+  align-items: center;
+}
+
+.PMedia button{
+  padding: 10px;
+  width: fit-content;
+  border-radius: 40px;
+  height: fit-content
+
+}
+.PMedia h3{
+  font-size: 35px;
+}
+.FancyBoxGA{
+  min-width: 350px;
+  min-height: 350px;
+  border: solid 2px #ccc;
+}
+.FancyBoxGA:hover{
+  width: 10%;
+  height: 10%;
+  border: solid 5px #3f3f3f;
+}

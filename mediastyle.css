@@ -1,0 +1,105 @@
+@media (max-width: 1280px ) {
+    :root{
+        --Texto01: 24px;
+    }
+    nav li{
+        margin-right: 0;
+    }
+    nav a{
+        font-size: 23px;
+    }
+    nav img{
+        width: 70px;
+    }
+    .carousely img {
+        max-width: 200px;
+        max-height: 350px;
+    }
+    #Port01,#Port03,#Port06,#Port08,#Port09{
+        position: absolute;
+        top: 50%;
+     left: 50%;
+    }
+    .content{
+        flex-direction: column;
+        margin: 2%;
+    }
+    .content article{
+        margin: 2%;
+    }
+    
+}
+@media (max-width: 670px) {
+    :root{
+        --Titulo01: 120px;
+        --Titulo02: 60px;
+        --Heading01: 40px;
+        --Heading02: 24px;
+        --Texto01: 22px;
+        --texto02: 18px;
+      }
+    /* Ocultar todos los elementos de la barra de navegación, excepto el logo y el icono de las líneas */
+    nav ul li:not(:first-child):not(:last-child) {
+      display: none;
+    }
+    /* Estilos para mostrar u ocultar elementos en la barra de navegación */
+    nav ul {
+        display: flex;
+    }
+      
+      nav ul li {
+        display: block;
+      }
+      
+    
+    
+    header {
+        height: 10%;        
+    }  
+    .Cont{
+        width: 90%;
+        margin: 2%;
+    }
+    .Nombre{
+        
+        width: 60%
+    }
+    
+    .ContPort{
+        width: 90%;
+    }
+    .ContactoCont, .OtrosProyectoa, .ContSobreMi, .FConts{
+        flex-direction: column;
+    }
+    .OtrosProyectoa article{
+        width: 90%;
+    }
+    .TextoSobreMi{
+        width: 90%;
+    }
+    #F03{
+        width: 90%;
+    }
+    .carousely img {
+        max-width: 300px;
+        max-height: 150px;
+    }
+
+    #Exp01, #Exp03{
+        position:static;
+        transform: rotate(-90deg) ;
+    }
+    .Cortos, .ProyectosO, .Parti, .Formacion, .conjuntoIntro, .PERow{
+        flex-direction: column;
+    }
+    
+    .GaleriaIntro{
+        align-items: baseline;
+    }
+.MainElement img{
+    width: 90vw;
+    height: auto;
+    margin: 2%;
+}
+    
+  }
